@@ -1,0 +1,29 @@
+.custom-button {
+  background-color: #000080;
+  color: #ffffff;
+  border: 2px solid #000080;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #ffdf00;
+  color: #000080;
+  border-color: #ffdf00;
+}
+
+.custom-button:active {
+  background-color: #ffa500;
+  color: #ffffff;
+  border-color: #ffa500;
+}
+
+.custom-button.selected {
+  background-color: #ffdf00;
+  color: #000080;
+  border-color: #ffdf00;
+}

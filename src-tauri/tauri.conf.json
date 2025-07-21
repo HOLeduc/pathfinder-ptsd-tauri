@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.tauri.app/config/2.6.2",
+  "identifier": "com.haroldleduc.pathfinder-ptsd-coach",
+  "productName": "Pathfinder PTSD Coach",
+  "version": "0.1.0",
+  "build": {
+    "beforeBuildCommand": "cd .. && npm run build",
+    "beforeDevCommand":   "cd .. && npm run dev",
+    "devUrl":             "http://localhost:5173",
+    "frontendDist":       "../dist"
+  },
+  "app": {
+    "security": { "csp": null },
+    "windows": [
+      {
+        "title": "Pathfinder PTSD Coach",
+        "width": 800,
+        "height": 600,
+        "resizable": true
+      }
+    ]
+  },
+  "bundle": {
+    "icon": ["icons/AppIcon.icns"],
+    "targets": ["dmg"],
+    "macOS": {
+      "minimumSystemVersion": "10.13",
+      "dmg": {
+        "appPosition":               { "x": 180, "y": 200 },
+        "applicationFolderPosition": { "x": 480, "y": 200 },
+        "windowSize":                { "width": 660, "height": 400 }
+      }
+    }
+  },
+  "plugins": {}
+}

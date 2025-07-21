@@ -1,0 +1,153 @@
+/* Reset and base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styling */
+.header {
+  background-color: #000080;
+  color: #ffffff;
+  padding: 20px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 192px;           /* was 160px */
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 8px;
+  transition: width 0.3s ease;
+}
+
+.app-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Section headings */
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+/* Button grid styling */
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+.button-grid button {
+  background-color: #ffffff;
+  color: #000;
+  border: 2px solid #000080;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-grid button:hover {
+  background-color: #f0f0f0;
+}
+
+.button-grid .selected {
+  background-color: #ffdf00;
+  color: #000;
+}
+
+/* Chat window styling */
+.chat-window {
+  flex-grow: 1;
+  padding: 16px;
+  margin: 20px auto;
+  max-width: 600px;
+  width: 90%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 80%;
+  padding: 10px 14px;
+  margin: 10px auto;
+  border-radius: 12px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.message.user {
+  background-color: #000080;
+  color: #ffffff;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.message.assistant {
+  background-color: #e0e0e0;
+  color: #000;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 4px;
+  text-align: right;
+}
+
+/* Input area styling */
+.input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  border-top: 1px solid #ddd;
+  background-color: #ffffff;
+}
+
+.input-area input {
+  flex: 1;
+  max-width: 400px;
+  padding: 10px;
+  border: 2px solid #000080;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.input-area button {
+  padding: 10px 20px;
+  background-color: #000080;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.input-area button:hover {
+  background-color: #000066;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "pathfinder-ptsd-tauri",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tauri": "cd src-tauri && tauri build"
+  },
+  "dependencies": {
+    "@capacitor/cli": "^6.2.1",
+    "@capacitor/core": "^7.4.2",
+    "@capacitor/ios": "^7.4.2",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-opener": "^2"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.6.2",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3"
+  }
+}
+
