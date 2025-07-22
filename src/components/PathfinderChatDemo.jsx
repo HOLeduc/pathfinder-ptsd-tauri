@@ -1,3 +1,4 @@
+// 🛠️ testing lint-staged hook
 import React, { useState } from "react";
 import Logo from "../assets/PathfinderLogoGoldTransparent.png";
 import Button from "./ui/button";
