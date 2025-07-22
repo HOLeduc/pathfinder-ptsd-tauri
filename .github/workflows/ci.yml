@@ -1,0 +1,46 @@
+# name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install front-end dependencies
+        run: npm ci
+
+      - name: Build front-end
+        run: npm run build
+
+      - name: Lint & format front-end
+        run: |
+          npx eslint "src/**/*.{js,jsx}" --max-warnings=0
+          npx prettier --check "src/**/*.{js,jsx}"
+
+  check-backend:
+    needs: build-frontend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Check Rust code
+        run: cargo check --manifest-path=src-tauri/Cargo.toml
+
